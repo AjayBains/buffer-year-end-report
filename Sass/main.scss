@@ -1,0 +1,111 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.9rem;
+}
+.container {
+  max-width: 85%;
+  margin: auto;
+}
+.topBar {
+  margin: 2rem 0;
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  justify-self: start;
+  @media screen and(max-width:500px) {
+    display: block;
+    text-align: center;
+  }
+  &__pic {
+    width: 20%;
+    @media screen and(max-width:1000px) {
+      width: 35%;
+    }
+    @media screen and(max-width:500px) {
+      width: 80%;
+      justify-self: center;
+    }
+  }
+  &__btn {
+    background-color: blue;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.2rem;
+    justify-self: end;
+
+    width: 90%;
+    @media screen and(max-width:500px) {
+      display: none;
+    }
+  }
+}
+/**Hero section*/
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+  &__img {
+    @media screen and (max-width: 750px) {
+      width: 90%;
+    }
+  }
+}
+
+/**Message section*/
+.message {
+  margin: 4rem 0;
+  &__text {
+    margin: 1.5rem 0;
+  }
+  &__agent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__pic {
+    width: 22%;
+    margin-bottom: 1.5rem;
+  }
+}
+// Testimonials
+.testimonial {
+  &__video {
+    display: block;
+    margin: auto;
+    width: 60vw;
+    height: 60vh;
+  }
+}
+// Footer section
+.footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+  align-items: center;
+  margin-top: 3rem;
+  &__icon {
+    width: 30%;
+  }
+
+  &__social {
+    display: flex;
+    justify-content: start;
+    justify-self: end;
+  }
+  &__scIcon {
+    background-color: coral;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin: 1.2rem;
+  }
+}
